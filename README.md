@@ -79,7 +79,9 @@ Les bénéfices liés à l'usage de la soluion Sac à Dos peuvent être multiple
 
 **Intégration Technologique :** Facile à intégrer dans les systèmes d'information existants, il permet une mise en œuvre rapide et efficace.
 
-Les problèmes d'optimisation et de simulation sont omniprésents dans le domaine de la production et de la logistique dans toutes les industries. Par exemple : la fabrication automobile, la production chimique et pharmaceutique, les assurances, les banques, la cybersécurité et la blockchain. Les principaux cas sont la gestion des files d'attente, le routage, la chaîne d'approvisionnement, la planification de la production et l'évaluation du ratio risque/performance d'assurance. Les problèmes du monde réel impliquent souvent un grand nombre de variables et de contraintes à respecter. Les algorithmes classiques, tels que le recuit simulé, ne peuvent souvent que trouver des optima locaux et fournir une solution non optimale.
+Les problèmes d'optimisation et de simulation sont omniprésents dans le domaine de la production et de la logistique dans toutes les industries. Par exemple : la fabrication automobile, la production chimique et pharmaceutique, les assurances, les banques, la cybersécurité et la blockchain. Les principaux cas sont la gestion des files d'attente, le routage, la chaîne d'approvisionnement, la planification de la production et l'évaluation du ratio risque/performance d'assurance. 
+
+Les problèmes du monde réel impliquent souvent un grand nombre de variables et de contraintes à respecter. Les algorithmes classiques, tels que le recuit simulé, ne peuvent souvent que trouver des optima locaux et fournir une solution non optimale.
 
 **Termes et conditions**
 
