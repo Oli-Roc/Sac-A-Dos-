@@ -16,9 +16,9 @@ Knapsack est conçu pour résoudre un problème universel : maximiser la valeur 
 
 L'algorithme procède en deux étapes clés :
 
-Évaluation : Chaque objet ou ressource (qu'il s'agisse d'un investissement, d'une unité de produit ou d'une capacité de stockage) est évalué en termes de valeur ajoutée et de coût. C'est ici que Knapsack se différencie : sa capacité à pondérer les éléments et à choisir ceux qui maximisent la valeur totale est inégalée.
+**Évaluation :** Chaque objet ou ressource (qu'il s'agisse d'un investissement, d'une unité de produit ou d'une capacité de stockage) est évalué en termes de valeur ajoutée et de coût. C'est ici que Knapsack se différencie : sa capacité à pondérer les éléments et à choisir ceux qui maximisent la valeur totale est inégalée.
 
-Sélection : Knapsack fait la sélection optimale en s'assurant que la combinaison choisie maximise la valeur, tout en respectant strictement les contraintes définies (capacité de stockage, coûts budgétaires, etc.). Ce n'est pas une simple optimisation, mais une intégration intelligente des ressources qui renforce la productivité.
+**Sélection :** Knapsack fait la sélection optimale en s'assurant que la combinaison choisie maximise la valeur, tout en respectant strictement les contraintes définies (capacité de stockage, coûts budgétaires, etc.). Ce n'est pas une simple optimisation, mais une intégration intelligente des ressources qui renforce la productivité.
 
 **Applications Stratégiques dans les Fonctions de Production**
 
@@ -47,21 +47,21 @@ Dans le domaine financier, l'algorithme Knapsack est utilisé pour la gestion de
 
 **Avantages Concrets pour Votre Entreprise**
 
-Amélioration de l'Efficacité : Optimisez l'utilisation de vos ressources pour augmenter la productivité et réduire les coûts.
+**Amélioration de l'Efficacité :** Optimisez l'utilisation de vos ressources pour augmenter la productivité et réduire les coûts.
 
-Prise de Décision Éclairée : Bénéficiez d'une approche scientifique pour des décisions stratégiques plus fiables et objectives.
+**Prise de Décision Éclairée :** Bénéficiez d'une approche scientifique pour des décisions stratégiques plus fiables et objectives.
 
-Flexibilité et Réactivité : Adaptez-vous rapidement aux changements du marché grâce à des solutions d'optimisation en temps réel.
+**Flexibilité et Réactivité :** Adaptez-vous rapidement aux changements du marché grâce à des solutions d'optimisation en temps réel.
 
-Avantage Concurrentiel : Renforcez votre position sur le marché en offrant des services plus performants et en optimisant vos marges.
+**Avantage Concurrentiel :** Renforcez votre position sur le marché en offrant des services plus performants et en optimisant vos marges.
 
 **Pourquoi Choisir l'Algorithme Knapsack ?**
 
-Robustesse Scientifique : Basé sur des méthodes éprouvées de la recherche opérationnelle, il offre des solutions optimales et fiables.
+**Robustesse Scientifique :** Basé sur des méthodes éprouvées de la recherche opérationnelle, il offre des solutions optimales et fiables.
 
-Adaptabilité : Applicable à une variété de secteurs et de problématiques, il répond aux besoins spécifiques de votre entreprise.
+**Adaptabilité :** Applicable à une variété de secteurs et de problématiques, il répond aux besoins spécifiques de votre entreprise.
 
-Intégration Technologique : Facile à intégrer dans les systèmes d'information existants, il permet une mise en œuvre rapide et efficace.
+**Intégration Technologique :** Facile à intégrer dans les systèmes d'information existants, il permet une mise en œuvre rapide et efficace.
 
 **Termes et conditions**
 
