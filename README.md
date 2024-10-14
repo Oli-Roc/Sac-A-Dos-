@@ -77,5 +77,7 @@ Pour la mise en œuvre de la solution Knapsack, nous recommandons le processus s
 
 **Suivi et rapports :** Nous organisons des réunions de suivi régulières pour s'assurer que tout fonctionne comme prévu et pour prendre en compte les retours d'expérience du client.
 
-Avec cette approche structurée, nous garantissons à nos clients non seulement une intégration fluide de la solution Knapsack, mais aussi une optimisation continue de leurs processus. Grâce à notre accompagnement personnalisé et à nos outils de suivi, vous bénéficiez d'un avantage compétitif clair : une amélioration constante de la performance opérationnelle et un retour sur investissement mesurable. Ensemble, nous ferons de l'optimisation un atout stratégique durable pour votre entreprise. Votre réussite est notre priorité, et Knapsack est le moteur de cette transformation.
+Avec cette approche structurée, nous garantissons à nos clients non seulement une intégration fluide de la solution Knapsack, mais aussi une optimisation continue de leurs processus. Grâce à notre accompagnement personnalisé et à nos outils de suivi, vous bénéficiez d'un avantage compétitif clair : une amélioration constante de la performance opérationnelle et un retour sur investissement mesurable. Ensemble, nous ferons de l'optimisation un atout stratégique durable pour votre entreprise. 
+
+Votre réussite est notre priorité, et Knapsack est le moteur de cette transformation.
 
