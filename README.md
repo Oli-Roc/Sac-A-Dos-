@@ -89,7 +89,7 @@ Pour la mise en œuvre de la solution Knapsack, nous recommandons le processus s
 
 **Test gratuit :** Le client peut tester l'algorithme gratuitement avec des données réelles de son processus ou avec des simulations basées sur les valeurs minimales et maximales de ses données de processus.
 
-**Modélisation gratuite :** Nous déterminons avec le client où, dans son processus, une optimisation par l'algorithme Knapsack est nécessaire et nous produisons un modèle personnalisé.
+**Modélisation personnalisée :** Nous déterminons avec le client où, dans son processus, une optimisation par l'algorithme Knapsack est nécessaire et nous produisons un modèle personnalisé.
 
 **Proposition de contrat :** Sur la base du modèle personnalisé, nous émettons une proposition de contrat avec une tarification basée sur le gain généré par la solution.
 
