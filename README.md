@@ -69,7 +69,7 @@ Les bénéfices liés à l'usage de la solution Sac à Dos peuvent être multipl
 
 **Prise de décision éclairée :** Bénéficiez d'une approche scientifique pour des décisions stratégiques plus fiables et objectives.
 
-**Programmation temporelle de l'activité :** Planifiez temporellement vos activités pour les valoriser financièrement et améliorer vos anticipations de façon rationnelle. Cela marque une différence fondamentale entre un fonctionnement basé sur le pilotage de l'activité et un fonctionnement dirigé par les seules contraintes des urgences et de la réactivité face à la demande.
+**Programmation temporelle de l'activité :** Planifiez temporellement vos activités pour les valoriser financièrement et améliorer vos anticipations.
 
 **Avantage concurrentiel :** Renforcez votre position sur le marché en offrant des services plus performants et en optimisant vos marges.
 
