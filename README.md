@@ -10,7 +10,7 @@ Knapsack est l'arme ultime de la rationalisation stratégique : fini les comprom
 
 **Comment ça marche ?**
 
-L'algorithme sac à dos repose sur un problème mathématique qui consiste à remplir un sac en maximisant la valeur totale des éléments sélectionnés tout en respectant une contrainte en terme de capacité du sac. Chaque élément a une valeur (ou gain) et un poids (ou coût), et l'objectif est de déterminer la combinaison optimale d'éléments qui offre la plus grande valeur sans dépasser la capacité disponible.
+L'algorithme sac à dos repose sur un problème mathématique qui consiste à remplir un sac en maximisant la valeur totale des éléments sélectionnés tout en respectant une contrainte en terme de capacité. Chaque élément a une valeur (ou gain) et un poids (ou coût), et l'objectif est de déterminer la combinaison optimale d'éléments qui offre la plus grande valeur sans dépasser la limite de poids du sac.
 
 Ce problème semble simple quand on l'énonce, mais il s'agit en réalité d'un problème d'optimisation combinatoire très complexe et exigeant en termes de ressources de calcul, ce qui explique qu'il ne puisse être résolu ni de façon cognitive par un être humain, ni par les logiciels classiques de gestion, mais seulement par une IA dédiée à la recherche opérationnelle et aux problèmes d'optimisation sous contrainte.
 
