@@ -10,9 +10,11 @@ Knapsack est l'arme ultime de la rationalisation stratégique : fini les comprom
 
 **Comment ça marche ?**
 
-L'algorithme du sac à dos est un modèle mathématique qui vise à maximiser la valeur totale des éléments sélectionnés tout en respectant une contrainte de capacité. Chaque élément a une valeur et un poids (ou coût), et l'objectif est de déterminer la combinaison optimale d'éléments qui offre la plus grande valeur sans dépasser la capacité disponible.
+L'algorithme sac à dos repose sur un problème mathématique qui consiste à remplir un sac en maximisant la valeur totale des éléments sélectionnés tout en respectant une contrainte en terme de capacité du sac. Chaque élément a une valeur (ou gain) et un poids (ou coût), et l'objectif est de déterminer la combinaison optimale d'éléments qui offre la plus grande valeur sans dépasser la capacité disponible.
 
-Knapsack est conçu pour résoudre un problème universel : maximiser la valeur totale que vous pouvez générer tout en restant dans les limites de vos ressources (capacité de production, budget, capacité logistique, etc.). Chaque ressource est traduite en une unité mesurable (coût, poids, volume, temps), et chaque décision devient une optimisation calculée qui garantit une exploitation optimale de vos capacités.
+Ce problème semble simple quand on l'énonce mais il s'agit en réalité d'un problème d'optimisation combinatoire extrêmement complexe et exigeant en termes de ressources de calcul, ce qui explique qu'il ne puisse être résolu ni de façon cognitve par un être humain, ni par les logociels classiques de gestion, mais seulement par une IA dédiée à la recherche opérationnelle et aux problèmes d'optimisation sous contrainte.
+
+Knapsack est conçu pour répondre à un besoin universel : maximiser la valeur totale que vous pouvez générer tout en restant dans les limites de vos ressources (capacité de production, budget, capacité logistique, etc.). Chaque ressource est traduite en une unité mesurable (coût, poids, volume, temps), et chaque décision devient une optimisation calculée qui garantit une exploitation optimale de vos capacités.
 
 L'algorithme procède en deux étapes clés :
 
