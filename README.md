@@ -69,11 +69,11 @@ Les bénéfices liés à l'usage de la solution Sac à Dos peuvent être multipl
 
 **Prise de décision éclairée :** Bénéficiez d'une approche scientifique pour des décisions stratégiques plus fiables et objectives.
 
-**Flexibilité et réactivité :** Adaptez-vous rapidement aux changements du marché grâce à des solutions d'optimisation en temps réel.
+**Programmation temporelle de l'activté :** Planifiez temporellement vos activités pour les valoriser financièrement de façon objective
 
 **Avantage concurrentiel :** Renforcez votre position sur le marché en offrant des services plus performants et en optimisant vos marges.
 
-**Robustesse scientifique :** Basé sur des méthodes éprouvées de la recherche opérationnelle, il offre des solutions optimales et fiables.
+**Robustesse scientifique :** Basé sur des méthodes éprouvées de la recherche opérationnelle, il vous garantit un choix optimal en toute situation.
 
 **Adaptabilité :** Applicable à une variété de secteurs et de problématiques, il répond aux besoins spécifiques de votre entreprise.
 
