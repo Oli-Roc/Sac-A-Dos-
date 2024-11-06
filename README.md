@@ -28,25 +28,23 @@ L'algorithme Knapsack peut être appliqué de manière transversale pour optimis
 
 Les neuf fonctions optimisables par l’algorithme Knapsack se déclinent comme suit, en visant une allocation optimale des ressources disponibles pour maximiser les gains du client :
 
-Gestion du temps de travail : Permet de réduire et de rendre plus efficaces les tâches effectuées, en organisant le temps de travail pour minimiser les pertes de temps. L’algorithme aide à sélectionner les tâches essentielles qui offrent la meilleure rentabilité horaire.
+**Gestion du temps de travail :** Permet de réduire et de rendre plus efficaces les tâches effectuées, en organisant le temps de travail pour minimiser les pertes de temps. L’algorithme aide à sélectionner les tâches essentielles qui offrent la meilleure rentabilité horaire.
 
-Gestion de la production : Vise à améliorer la qualité et la rapidité d’exécution, en permettant un agencement des processus de production qui maximise la sortie de produits de qualité dans un délai réduit.
+**Gestion de la production :** Vise à améliorer la qualité et la rapidité d’exécution, en permettant un agencement des processus de production qui maximise la sortie de produits de qualité dans un délai réduit.
 
-Gestion des stocks : Contribue à diminuer et à rationaliser les niveaux de stock, en identifiant le juste nécessaire pour éviter le surstockage ou la rupture de stock, optimisant ainsi les coûts d’inventaire et d’espace.
+**Gestion des stocks :** Contribue à diminuer et à rationaliser les niveaux de stock, en identifiant le juste nécessaire pour éviter le surstockage ou la rupture de stock, optimisant ainsi les coûts d’inventaire et d’espace.
 
-Gestion des commandes : Facilite la priorisation temporelle des commandes selon les délais et l’importance stratégique, permettant de traiter les commandes les plus urgentes et les plus profitables en priorité.
+**Gestion des commandes :** Facilite la priorisation temporelle des commandes selon les délais et l’importance stratégique, permettant de traiter les commandes les plus urgentes et les plus profitables en priorité.
 
-Gestion des livraisons : Permet de regrouper les livraisons et d’optimiser les délais, ce qui réduit les coûts logistiques et améliore la satisfaction client en assurant des délais plus précis et contrôlés.
+**Gestion des livraisons :** Permet de regrouper les livraisons et d’optimiser les délais, ce qui réduit les coûts logistiques et améliore la satisfaction client en assurant des délais plus précis et contrôlés.
 
-Gestion commerciale : Concentre les efforts commerciaux en maximisant la valeur des rendez-vous et des interactions clients, en ciblant ceux qui présentent le meilleur potentiel de retour sur investissement.
+**Gestion commerciale :** Concentre les efforts commerciaux en maximisant la valeur des rendez-vous et des interactions clients, en ciblant ceux qui présentent le meilleur potentiel de retour sur investissement.
 
-Tarification dynamique : Affine la tarification en fonction de la demande et des coûts, en appliquant une méthodologie de tarification dynamique qui ajuste les prix pour maximiser les marges et la compétitivité.
+**Tarification dynamique :** Affine la tarification en fonction de la demande et des coûts, en appliquant une méthodologie de tarification dynamique qui ajuste les prix pour maximiser les marges et la compétitivité.
 
-Gestion de la trésorerie : Optimise les flux de trésorerie en réduisant les délais de paiement et en adaptant les montants des encaissements, ce qui améliore la liquidité et réduit le risque financier.
+**Gestion de la trésorerie :** Optimise les flux de trésorerie en réduisant les délais de paiement et en adaptant les montants des encaissements, ce qui améliore la liquidité et réduit le risque financier.
 
-Gestion du bénéfice : Améliore le rapport entre charges et recettes en identifiant les ressources et activités les plus rentables, contribuant à augmenter la marge bénéficiaire globale.
-
-Calcul des gains : Ces optimisations se traduisent en gains mesurables sous forme de temps, d’espace et d’argent économisés, ce qui offre une vision quantifiable de l’impact de l’algorithme Knapsack sur les performances opérationnelles et financières.
+**Calcul des gains :** Ces optimisations se traduisent en gains mesurables sous forme de temps, d’espace et d’argent économisés, ce qui offre une vision quantifiable de l’impact de l’algorithme Knapsack sur les performances opérationnelles et financières.
 
 **Pourquoi choisir l'algorithme Knapsack ?**
 
