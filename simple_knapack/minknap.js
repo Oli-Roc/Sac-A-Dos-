@@ -1,4 +1,4 @@
-const Module = require('./minknap.out.js')
+import initWasm from './minknap.out.mjs'
 
 const initArray = a => {
   const nByte = 4
@@ -10,13 +10,7 @@ const initArray = a => {
   return buffer
 }
 
-let resolved: () => void
-const ready = new Promise(resolve => {
-  resolved = resolve
-})
-Module.onRuntimeInitialized = resolved
-
-type Run = { W: number; items: Array<{ p: number; w: number }> }
+let Module
 
 const buildResults = ({ x, items }) => {
   let sp = 0
@@ -36,8 +30,9 @@ const buildResults = ({ x, items }) => {
   }
 }
 
-const run = async ({ W, items }: Run) => {
-  await ready
+const run = async ({ W, items }) => {
+  Module = Module || initWasm()
+  Module = await Module
 
   const em_p = initArray(items.map(it => it.p))
   const em_w = initArray(items.map(it => it.w))
@@ -57,7 +52,7 @@ const run = async ({ W, items }: Run) => {
   return buildResults({ x: backX, items })
 }
 
-module.exports = {
+export default {
   run,
   buildResults
 }

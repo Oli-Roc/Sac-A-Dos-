@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form>
+    items: <textarea>
+      [
+        { "p": 2,  "w": 4 },
+        { "p": 3,  "w": 10 },
+        { "p": 5,  "w": 15 },
+        { "p": 8,  "w": 4 },
+        { "p": 1,  "w": 12 },
+        { "p": 12, "w": 9 }
+      ]
+    </textarea>
+      <br/>
+    maxWeight: <input type="text" value="30" name="maxBagWeight"/>
+    <button>go</button>
+  </form>
+  <hr/>
+  <code id="output"></code>
+  <script type="module">
+    import Mod from './minknap.js'
+    const { run, buildResults } = Mod
+    const out = s => document.querySelector('#output').innerHTML = JSON.stringify(s, null, 2)
+    document.querySelector('form').addEventListener('submit', e => {
+      e.preventDefault()
+      try {
+        const items = JSON.parse(document.querySelector('textarea').value)
+        const W = parseInt(document.querySelector('[name="maxBagWeight"]').value, 10)
+        run({ items, W }).then(results => {
+          out(results)
+        }).catch(e => {
+          out(e.message)
+        })
+      } catch (e){
+        out(e.message)
+      }
+
+      return false
+    })
+  </script>
+  <style>
+    textarea { width: 400px; height: 400px;}
+    code { white-space:pre; width: 400px; height: 400px; }
+  </style>
+</body>
+</html>
