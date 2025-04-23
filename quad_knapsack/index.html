@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form>
+    items: <textarea name="items">
+      [{ "w": 4 }, { "w": 10 }, { "w": 15 }, { "w": 4 }, { "w": 12 }, { "w": 9 }]
+    </textarea>
+    pMatrix: <textarea name="pmatrix">
+      [
+        [1, 2, 3, 4, 5, 6],
+        [2, 3, 4, 5, 6, 7],
+        [3, 4, 5, 6, 7, 8],
+        [6, 5, 4, 3, 2, 1],
+        [2, 1, 3, 5, 9, 3],
+        [10, 9, 8, 4, 2, 1]
+      ]
+    </textarea>
+      <br/>
+    maxWeight: <input type="text" value="30" name="maxBagWeight"/>
+    <button>go</button>
+  </form>
+  <hr/>
+  <code id="output"></code>
+  <script type="module">
+    import Mod from './quadknap.js'
+    const { run, buildResults } = Mod
+    const out = s => document.querySelector('#output').innerHTML = JSON.stringify(s, null, 2)
+    document.querySelector('form').addEventListener('submit', e => {
+      e.preventDefault()
+      try {
+        const items = JSON.parse(document.querySelector('[name="items"]').value)
+        const pMatrix = JSON.parse(document.querySelector('[name="pmatrix"]').value)
+        const W = parseInt(document.querySelector('[name="maxBagWeight"]').value, 10)
+        run({ items, pMatrix, W }).then(results => {
+          out(results)
+        }).catch(e => {
+          out(e.message)
+        })
+      } catch (e){
+        out(e.message)
+      }
+
+      return false
+    })
+  </script>
+  <style>
+    textarea { width: 400px; height: 400px;}
+    code { white-space:pre; width: 400px; height: 400px; }
+  </style>
+</body>
+</html>
