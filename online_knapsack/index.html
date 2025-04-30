@@ -21,8 +21,7 @@
   <hr/>
   <code id="output"></code>
   <script type="module">
-    import Mod from './online-mkp.ts'
-    const { run, buildResults } = Mod
+    import { multi, getV } from './greedy.ts'
     const out = s => document.querySelector('#output').innerHTML = JSON.stringify(s, null, 2)
     document.querySelector('form').addEventListener('submit', e => {
       e.preventDefault()
@@ -30,12 +29,14 @@
         const items = JSON.parse(document.querySelector('[name="items"]').value)
         const W = JSON.parse(document.querySelector('[name="bags"]').value)
 
-        const valueToWeights = items.map(({ p, w }) => p / w).sort((a, b) => a - b)
-        const U = valueToWeights[valueToWeights.length - 1]
-        const L = valueToWeights[0]
-        const state = run({ capacities: W, U, L })
-        items.forEach(it => state.onItem(it))
-        out({ totalvalue: state.sp, bins: state.bins.map(b => ({ items: b.items })) })
+        const sumC = W.reduce((acc, C) => acc + C, 0)
+        const normedItems = items.map(({ p, w }) => ({ p, w: w / sumC, v: p / (w / sumC) }))
+        const normedW = W.map(C => C / sumC)
+        const state = multi({ v: getV(normedItems, normedW), W: normedW })
+
+
+        normedItems.forEach(it => state.onItem(it))
+        out(state)
       } catch (e){
         out(e.message)
       }
