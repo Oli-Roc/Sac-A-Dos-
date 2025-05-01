@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form>
+    items: <textarea name="items">
+      [
+        { "w": 4, "p": 28 },
+        { "w": 1, "p": 2 },
+        { "w": 1, "p": 3 },
+        { "w": 1, "p": 4 },
+        { "w": 1, "p": 6 },
+        { "w": 1, "p": 5 }
+      ]
+    </textarea>
+    bags (sorted asc)<textarea name="bags">
+      [1, 1, 2]
+    </textarea>
+      <br/>
+    <button>go</button>
+  </form>
+  <hr/>
+  <code id="output"></code>
+  <script type="module">
+    import { multi, getV } from './greedy.ts'
+    const out = s => document.querySelector('#output').innerHTML = JSON.stringify(s, null, 2)
+    document.querySelector('form').addEventListener('submit', e => {
+      e.preventDefault()
+      try {
+        const items = JSON.parse(document.querySelector('[name="items"]').value)
+        const W = JSON.parse(document.querySelector('[name="bags"]').value)
+
+        const sumC = W.reduce((acc, C) => acc + C, 0)
+        const normedItems = items.map(({ p, w }) => ({ p, w: w / sumC, v: p / (w / sumC) }))
+        const normedW = W.map(C => C / sumC)
+        const state = multi({ v: getV(normedItems, normedW), W: normedW })
+
+
+        normedItems.forEach(it => state.onItem(it))
+        out(state)
+      } catch (e){
+        out(e.message)
+      }
+
+      return false
+    })
+  </script>
+  <style>
+    textarea { width: 400px; height: 400px;}
+    code { white-space:pre; width: 400px; height: 400px; }
+  </style>
+</body>
+</html>
