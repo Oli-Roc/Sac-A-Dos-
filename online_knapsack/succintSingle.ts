@@ -1,12 +1,17 @@
 // https://arxiv.org/pdf/2406.18752
-export const getBounds = ({ items }) => {
+type Item = {
+  v: number,
+  w: number,
+  p: number
+}
+export const getBounds = ({ items }: { items: Item[] }) => {
   const sorted = items.slice(0).sort((a, b) => b.v - a.v)
   return {
     U: sorted[0].v,
     L: sorted[sorted.length - 1].v
   }
 }
-export const getV = ({ items }) => {
+export const getV = ({ items }: { items: Item[] }) => {
   const sorted = items.slice(0).sort((a, b) => b.v - a.v)
   let s = 0
   for (const { w, v } of sorted) {
@@ -16,15 +21,15 @@ export const getV = ({ items }) => {
     }
   }
 }
-export const fr2Int = ({ ppa, delta, eps, U, L }) => {
-  const logDCeil = z => Math.ceil(Math.log(z) / Math.log(1 + delta))
+export const fr2Int = ({ ppa, delta, eps, U, L }: { ppa: ReturnType<typeof makePpa>, delta: number, eps: number, U: number, L: number }) => {
+  const logDCeil = (z: number) => Math.ceil(Math.log(z) / Math.log(1 + delta))
   const A = Array.from({ length: logDCeil(U / L) + 1 }, () => 0)
   const R = A.slice(0)
   const state = {
-    items: [],
+    items: [] as Item[],
     total: 0,
     sp: 0,
-    onItem(it) {
+    onItem(it: Item) {
       const { v: vi, w: wi, p } = it
       const xi = ppa.onItem({ v: vi, w: wi, p })
       const j = logDCeil(vi / L)
@@ -44,13 +49,13 @@ export const fr2Int = ({ ppa, delta, eps, U, L }) => {
   }
   return state
 }
-export const makePpa = ({ v }) => {
+export const makePpa = ({ v }: { v: number }) => {
   let w = 0
   let s = 0
   const state = {
     sp: 0,
     total: 0,
-    onItem({ v: vi, w: wi, p }) {
+    onItem({ v: vi, w: wi, p }: Item) {
       if (vi < v) {
         return 0
       }
