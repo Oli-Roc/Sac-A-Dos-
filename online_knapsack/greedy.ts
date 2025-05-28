@@ -3,7 +3,7 @@ type Item = {
   v: number // profit / weight
   w: number // weight
 }
-export const getV = (items: Item[], W) => {
+export const getV = (items: Item[], W: number[]) => {
   let s = 0
   const sorted = items.slice(0).sort((a, b) => b.v - a.v)
 
@@ -36,6 +36,7 @@ type MultiProps = {
 }
 type Bag = {
   total: number
+  i: number
   items: Item[]
   max: number
   sp: number
