@@ -5,13 +5,12 @@ import path from 'node:path'
 
 const execp = util.promisify(exec)
 
-
 const readEabfitItems = async (prefix:string): Promise<ReadItem[]> => {
   const data = await fsp.readFile(`${prefix}.out`, 'utf8')
   const lines = data.split('\n')
   const itemIndex = lines.findIndex(l => l.includes('PACKEDZ')) + 2
   const itemLines = lines.slice(itemIndex).filter(l => l.match(/\d+/))
-  const items = []
+  const items: ReadItem[] = []
   // NO: PACKSTA DIMEN-1  DMEN-2  DIMEN-3   COOR-X   COOR-Y   COOR-Z   PACKEDX  PACKEDY  PACKEDZ
   for (const itemLine of itemLines) {
     const [id, _packsta, _dim1, _dim2, _dim3, x, y, z, w, h, d] = itemLine
@@ -44,7 +43,7 @@ const readPackingsolverItems = async (fname:string): Promise<ReadItem[]> => {
   const lines = data.split('\n')
   const itemIndex = lines.findIndex(l => l.includes('PACKEDZ')) + 2
   const itemLines = lines.slice(itemIndex).filter(l => l.match(/\d+/))
-  const items = []
+  const items: ReadItem[] = []
   for (const itemLine of itemLines) {
     // TYPE,ID,COPIES,BIN,X,Y,Z,LX,LY,LZ,ROTATION
     const [type, ...values] = itemLine.split(/,/).filter(x => x != '')
@@ -66,7 +65,9 @@ const run = async ({ items: iItems, W }: { items: (Item)[], W: Box}) => {
   iItems.forEach(({ w, h, d }, i) => {
     data.push(`${i}. ${[w, h, d].join(' ')}`)
   })
+
   const tmpDir = 'tmp'
+
   const eabfitPrefix = 'eabfit_sample'
   await fsp.writeFile(path.join(tmpDir, `${eabfitPrefix}.txt`), data.join('\n'))
 
@@ -116,13 +117,13 @@ export const items = ${JSON.stringify(
   )
 }
 
-const main = async fname => {
+const main = async (fname:string) => {
   if (!fname) {
     console.error(process.argv)
     throw new Error('need filename argument')
   }
   const json = await fsp.readFile(fname, 'utf8').then(JSON.parse)
-  return run({W: json.W, items: json.items })
+  return run(json)
 }
 
 main(process.argv[2])
