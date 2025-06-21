@@ -86,7 +86,8 @@ const run = async ({ items: iItems, W }: { items: {w: number, h: number}[], W: {
   }
 
   let items: ReadItem[] = []
-  console.log(`(knap|packing) = (${matchA}|${matchB})`)
+  const area = W.w * W.h
+  console.log(`(knap|packing) = (${(matchA/area * 100).toFixed(2)}|${(matchB/area * 100).toFixed(4)})%`)
   if (matchA > matchB) {
     items = await readKnapItems(`${path.join(tmpDir, knapFileName)}.solution`)
   } else {
