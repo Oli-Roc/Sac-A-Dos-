@@ -30,7 +30,7 @@ const writePackingSolverFiles = async (data: [string, ...string[]], filePrefix: 
 ${data
   .slice(1)
   .map(r => {
-    return r.replace(/[^0-9]+/g, ',') + ',6,1'
+    return r.replace(/[^0-9]+/g, ',').replace(/,1$/, ',6,1')
   })
   .join('\n')}
 `
@@ -63,7 +63,7 @@ const run = async ({ items: iItems, W }: { items: (Item)[], W: Box}) => {
 
   const data: [string, ...string[]] = [[W.w, W.h, W.d].join(' ')]
   iItems.forEach(({ w, h, d }, i) => {
-    data.push(`${i}. ${[w, h, d].join(' ')}`)
+    data.push(`${i}. ${[w, h, d, 1].join(' ')}`)
   })
 
   const tmpDir = 'tmp'
