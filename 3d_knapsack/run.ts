@@ -88,7 +88,7 @@ const run = async ({ items: iItems, W }: { items: (Item)[], W: Box}) => {
   ])
 
   const matchA = Number.parseFloat(a.trim().replace(/[^0-9.]/g, ''))
-  const matchB = Number.parseFloat(String(b.match(/Volume load:.*?(\d+(\.\d)?)/)![1])) * 100
+  const matchB = Number.parseFloat(String(b.match(/Volume load:.*?(\d+(\.\d+)?)/)![1])) * 100
   if (Number.isNaN(matchA)) {
     throw new Error('failed to match volume for eabit')
   }
@@ -100,7 +100,7 @@ const run = async ({ items: iItems, W }: { items: (Item)[], W: Box}) => {
   if (matchA > matchB) {
     items = await readEabfitItems(path.join(tmpDir, `${eabfitPrefix}`))
   } else {
-    items = await readPackingsolverItems(path.join(tmpDir, `${packingSolverPrefix}_output.json`))
+    items = await readPackingsolverItems(path.join(tmpDir, `${packingSolverPrefix}_solution_box.csv`))
   }
 
   await fsp.writeFile(
