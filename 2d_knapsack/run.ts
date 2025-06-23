@@ -50,6 +50,7 @@ const readPackingsolverItems = async (fname:string): Promise<ReadItem[]> => {
   return items
 }
 
+const TIME_LIMIT_SECONDS = 10
 type ThreeItem = { i: number, X: number, Y: number, Z: number, w: number, h: number, d: number }
 const run = async ({ items: iItems, W }: { items: {w: number, h: number}[], W: { w: number, h: number }}) => {
   const data:[string, ...string[]] = [`${[W.w, W.h].join(' ')} // WBIN HBIN`]
@@ -66,14 +67,14 @@ const run = async ({ items: iItems, W }: { items: {w: number, h: number}[], W: {
   await writePackingSolverFiles(data, path.join(tmpDir, packingFilePrefix))
 
   const [{ stdout: a, stderr: aErr }, { stdout: b }] = await Promise.all([
-    execp(`make run input_file=${path.join(tmpDir, knapFileName)} params=max_time_in_seconds:10`),
+    execp(`make run input_file=${path.join(tmpDir, knapFileName)} params=max_time_in_seconds:${TIME_LIMIT_SECONDS}`),
     execp(`cd tmp && ../packingsolver/install/bin/packingsolver_rectangle \
         --verbosity-level 1 \
         --items ${packingFilePrefix}_items.csv \
         --bins ${packingFilePrefix}_bins.csv \
         --objective knapsack \
         --certificate ${packingFilePrefix}_solution.csv \
-        --time-limit 10`.replace(/\s+/g, ' ')),
+        --time-limit ${TIME_LIMIT_SECONDS}`.replace(/\s+/g, ' ')),
   ])
 
   const matchA = Number.parseFloat(String([...aErr.matchAll(/area used:\s*(\d+)/g)].pop()![1]))

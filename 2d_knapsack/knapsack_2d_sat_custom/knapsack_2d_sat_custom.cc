@@ -38,7 +38,6 @@
 
 ABSL_FLAG(std::string, input, "", "Input file.");
 ABSL_FLAG(int, instance, -1, "Instance number if the file.");
-ABSL_FLAG(int, instance, -1, "Instance number if the file.");
 ABSL_FLAG(std::string, params, "", "Sat parameters in text proto format.");
 
 namespace operations_research {
@@ -150,7 +149,7 @@ void CheckAndPrint2DSolution(
     LOG(INFO) << "Cost " << objective << ", " << num_items - objective
               << " items selected, area used: " << used_area << "/" << box_area;
   }
-
+  /*
   solution_in_ascii_form->clear();
   solution_in_ascii_form->append("\n");
   for (int i = 0; i < size_x; ++i) {
@@ -160,7 +159,7 @@ void CheckAndPrint2DSolution(
     }
     solution_in_ascii_form->append("\n");
   }
-
+  */
 
 }
 
